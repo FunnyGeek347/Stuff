@@ -1,16 +1,14 @@
-#check how to read and open a file from A20
+# input how many arrays
+num_arrays = int(input("How many arrays do you want to find the average of?"))
+
+#Hint:
+
+#Now use the code to see how many arrays?
+#use a loop to now find the average and print the average.
+for x in range(0, num_arrays):
+  a = input("Enter Your array").split()
+  a = [int(x) for x in a]
+  a = sum(a) / float(len(a))
 
 
-#create a function to count a specified word
-#Keep the general defintion words.
-
-def countWord(file_name, word):
-  message_file = open(file_name,'r').read().split()
-  count = 0
-  for fileWord in message_file:
-    if fileWord in word:
-      count+=1
-  return count
-
-wordsFound = countWord("alice.txt", "cat")
-print(wordsFound)
+  print("The average is:" ,a)
