@@ -1,0 +1,20 @@
+communism = int(input('How many times do you want to flip a coin?\n'))
+import random
+
+heads = 0
+tails = 0
+
+list = [1,2]
+
+for x in range(0,communism):
+  flip = random.choice(list)
+  if flip == 1:
+    heads += 1
+  else:
+    tails += 1
+print(" \n")
+
+print("Total coin flips")
+print("================")
+print("Heads:",heads)
+print("Tails:",tails)
