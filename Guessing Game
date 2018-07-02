@@ -1,0 +1,14 @@
+import random #this will import a random number
+
+num = random.randint(1, 100)
+
+guess = int(input("Guess a number: "))
+while guess:
+  if guess == num:
+    print('Exactly right')
+    break
+  if guess < num:
+    print("Too low")
+  elif guess > num:
+    print("Too high")
+  guess = int(input("Guess again: "))
