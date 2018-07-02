@@ -1,0 +1,23 @@
+array = input('Input your list of numbers:\n')
+array = [int(x) for x in array.split()]
+mean = sum(array) / len(array)
+def median(array):
+    sortedLst = sorted(array)
+    arrayLen = len(array)
+    index = (arrayLen - 1) // 2
+
+    if (arrayLen % 2):
+        return sortedLst[index]
+    else:
+        return (sortedLst[index] + sortedLst[index + 1])/2.0
+def mode(array):
+  return max(array, key = array.count)
+  
+
+
+
+
+
+print('mean:' ,mean)
+print('median:' ,median(array))
+print('mode:' ,mode(array))
