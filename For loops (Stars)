@@ -1,0 +1,4 @@
+# construct your for loop here!
+stars = ['*','**','***','****','*****','******','*******']
+for x in stars:
+  print(x)
