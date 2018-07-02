@@ -1,0 +1,16 @@
+#check how to read and open a file from A20
+
+
+#create a function to count a specified word
+#Keep the general defintion words.
+
+def countWord(file_name, word):
+  message_file = open(file_name,'r').read().split()
+  count = 0
+  for fileWord in message_file:
+    if fileWord in word:
+      count+=1
+  return count
+
+wordsFound = countWord("alice.txt", "cat")
+print(wordsFound)
