@@ -1,0 +1,24 @@
+# Use the code from last exercise here.
+data = []
+start = int(input('How many elements you want: '))
+for i in range(0, start):
+  number = int(input("Enter next number: "))
+  data.append(number)
+print(data)
+
+# Ask user to enter a number to find in the array
+print("Enter a number:")
+elem2 = int(input("Which number do you want to find?"))
+def count_4s(data):   #this defines the method
+  
+  count = 0
+  
+  for m in data:      #this counts the 4s
+    
+    if m == elem2:
+      
+      count+=1
+  
+  return count             #this returns the count
+
+print("There are",count_4s(data),elem2,"'s in the array")
