@@ -1,0 +1,11 @@
+#check how to read and open a file from A20
+test = ['cat', 'fire', 'hotel', 'rat']
+
+#create a function to find the longest word
+def longestWord(file_name):
+  with open("alice.txt", 'r') as infile:
+    word = infile.read().split()
+  maxWordlen = len(max(word, key=len))
+  return [word for word in word if len(word) == maxWordlen]
+
+print(longestWord("alice.txt"))
