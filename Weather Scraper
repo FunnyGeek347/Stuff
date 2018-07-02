@@ -1,0 +1,10 @@
+from bs4 import BeautifulSoup
+import requests
+link = 'https://weather.com/weather/5day/l/USOK0412:1:US'
+r = requests.get(link)
+r_html = r.text
+
+soup = BeautifulSoup(r_html,"lxml")
+
+for story in soup.find_all(class_="clickable closed"):
+  print(story.text.replace("\n"," ").strip())
