@@ -1,0 +1,42 @@
+print('Calculator')
+print('Choose operation')
+print('1. Add')
+print('2. Subtract')
+print('3. Multiply')
+print('4. Divide')
+
+def add(a, b):
+  return a + b
+def subtract(a, b):
+  return a - b
+def multiply(a, b):
+  return a * b
+def divide(a, b):
+  return a / b
+
+while True:
+  try:
+    opchoice = int(input('Enter operation of choice(1/2/3/4): '))
+  except ValueError:
+    print('Enter a number!')
+  try:
+    divide(1, 0)
+  except ZeroDivisionError:
+    print('can\'t divide by zero')
+  else:
+    if opchoice == 1:
+      a = int(input('Enter first number: '))
+      b = int(input('Enter second number: '))
+      print(add(a, b))
+    elif opchoice == 2:
+      a = int(input('Enter first number: '))
+      b = int(input('Enter second number:'))
+      print(subtract(a, b))
+    elif opchoice == 3:
+      a = int(input('Enter first number: '))
+      b = int(input('Enter second number:'))
+      print(multiply(a, b))
+    elif opchoice == 4:
+      a = int(input('Enter first number: '))
+      b = int(input('Enter second number:'))
+      print(divide(a, b))
